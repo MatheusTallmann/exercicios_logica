@@ -1,0 +1,11 @@
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.exe
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.deps.json
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.runtimeconfig.json
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.runtimeconfig.dev.json
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.dll
+C:\dev\primeira-aula\bin\Debug\netcoreapp3.1\primeira-aula.pdb
+C:\dev\primeira-aula\obj\Debug\netcoreapp3.1\primeira-aula.csprojAssemblyReference.cache
+C:\dev\primeira-aula\obj\Debug\netcoreapp3.1\primeira-aula.AssemblyInfoInputs.cache
+C:\dev\primeira-aula\obj\Debug\netcoreapp3.1\primeira-aula.AssemblyInfo.cs
+C:\dev\primeira-aula\obj\Debug\netcoreapp3.1\primeira-aula.dll
+C:\dev\primeira-aula\obj\Debug\netcoreapp3.1\primeira-aula.pdb
