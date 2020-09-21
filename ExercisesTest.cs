@@ -41,13 +41,15 @@ namespace primeiraLista
             int[] returnedValues = exercises.Exercise1B();
 
             // Deve / Asserções
-            var expectedOutput = new int[10];
-            
-            for (int i = 10; i < expectedOutput.Length; i++)
+            var expectedOutput = new int[10]
+            {
+                10,9,8,7,6,5,4,3,2,1
+            };
+
+            for (int i = 0; i < expectedOutput.Length; i++)
             {
                 Assert.Equal(expectedOutput[i], returnedValues[i]);
             }
-            
         }
 
         [Fact]
@@ -71,18 +73,7 @@ namespace primeiraLista
                 item5 => { Assert.Equal(10, item5); }
             );            
         }
-        [Fact]
-        public void should_return_5050()
-        {
-            // Dado / Setup
-            var exercises = new Exercises();
 
-            // Quando / Ação
-            var sum = exercises.Exercise2();
-
-            //Deve / Asserção
-            Assert.Equal(5050, sum);
-        }
         [Fact]
         public void should_return_all_odd_numbers_less_than_200()
         {
@@ -106,12 +97,19 @@ namespace primeiraLista
                 167, 169, 171, 173, 175, 177, 179, 181, 
                 183, 185, 187, 189, 191, 193, 195, 197, 199
             };
+        }
             
+        [Fact]
+        public void should_return_5050()
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+
+            // Quando / Ação
+            var sum = exercises.Exercise2();
+
             //Deve / Asserção
-            for (int i = 1; i < 100; i++)
-            {
-                Assert.Equal(expectedNumber[i], numbers[i]);
-            }
+            Assert.Equal(5050, sum);
         }
         [Fact]
         public void should_return_7_when_passed_5_and_9()
@@ -130,6 +128,17 @@ namespace primeiraLista
         }
 
         [Theory]
+        [InlineData(new double[5]{22, 35, 32, 11, 55}, 60)]
+        public void should_return_percentage_of_ages_between_18_and_35(double[] ages, double expected)
+        {
+            var exercises = new Exercises();
+
+            double result = exercises.Exercise5(ages.ToList());
+
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData(new int[3]{4, 6, 8}, 6)]
         [InlineData(new int[2]{4, 6}, 5)]
         [InlineData(new int[4]{1, 2, 3, 4}, 2.5)]
@@ -144,50 +153,5 @@ namespace primeiraLista
             // Deve / Asserções
             Assert.Equal(expected, result);
         }
-
-        // [Theory]
-        // [InlineData(new double[5]{22, 35, 32, 11, 55}, 60)]
-        // public void should_return_60_when_3_women_are_Between_18_And_35(double[] ages, double expected)
-        // // Criar um algoritmo que peça o nome e a idade de 5 mulheres. 
-        // // Após informar estes dados, o programa deve mostrar 
-        // // apenas porcentagem de mulheres que estão com idade entre 18 e 35. 
-        // {
-        //     // Dado / Setup
-        //     var exercises = new Exercises();
-
-        //     // Quando / Ação
-        //     double result = exercises.Exercise5(ages.ToList());
-
-        //     // Deve / Asserções
-        //     Assert.Equal(expected, result);
-        // }
-
-         [Theory]
-        [InlineData(new double[5]{22, 35, 32, 11, 55}, 60)]
-        public void should_return_percentage_of_ages_between_18_and_35(double[] ages, double expected)
-        {
-            var exercises = new Exercises();
-
-            double result = exercises.Exercise5(ages.ToList());
-
-            Assert.Equal(expected, result);
-        }
-        
-
-        [Theory]
-        [InlineData(6, new int[10]{6, 12, 18, 24, 30, 36, 42, 48, 54, 60})]
-        [InlineData(5, new int[10]{5, 10, 15, 20, 25, 30, 35, 40, 45, 50})]
-        public void should_return_the_input_multiplied_by_1_to_10(int number, int[] expectedResult)
-        {
-            // Dado / Setup
-            var exercises = new Exercises();
-            
-            // Quando / Ação
-        //     var result = exercises.Exercise17(number);
-
-        //     // Deve / Asserções
-        //     Assert.Equal(result, expectedResult);
-        // 
-        }
-    }   
+    }
 }

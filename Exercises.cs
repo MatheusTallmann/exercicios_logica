@@ -64,7 +64,7 @@ namespace primeiraLista
             }
 
             return counter;
-        }
+        }    
         public double Exercise4(List<int> ages)
 		{
             double sum = 0.0;
@@ -80,7 +80,6 @@ namespace primeiraLista
 
             return average;
 		}
-        
         public double Exercise5(List<double> womenAge)
         {
             double womanBeetween18And36 = 0;

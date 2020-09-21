@@ -64,6 +64,7 @@ namespace primeiraLista
             {
                 System.Console.WriteLine(counter);
             }
+
 		}
         
         // Calcular a média de idade de uma turma qualquer. O algoritmo 
@@ -514,3 +515,4 @@ namespace primeiraLista
         // }
     }
 }
+    
