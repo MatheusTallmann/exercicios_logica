@@ -93,6 +93,24 @@ namespace primeiraLista
             }
 
             return (100.0/womenAge.Count)*womanBeetween18And36;
-        }    
+        }   
+        public double Exercise7(int yearsSmoking, int cigarettesPerDay, double price)
+        // Calcular a quantidade de dinheiro gasto por um fumante. Dados: o numero de anos que ele fuma,
+        //  o nº de cigarros fumados por dia e o preço de uma carteira.
+        {
+            const int numberCigarettesWallet = 20;
+            const int daysInYear = 365;
+
+            var cigarettesPrice = price / numberCigarettesWallet;
+            var totalCigarettesSmoked = yearsSmoking * cigarettesPerDay * daysInYear;
+
+            return totalCigarettesSmoked * cigarettesPrice; 
+        }
+
+        public string Exercise8(int firstNumber, int secondNumber)
+        {
+            return firstNumber % secondNumber == 0 ? "É multiplo" : "Não é multiplo";
+            
+        }
     }
 }

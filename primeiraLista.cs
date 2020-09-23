@@ -235,10 +235,6 @@ namespace primeiraLista
             {
                 System.Console.WriteLine("O primeiro número digitado é multiplo do segundo!");
             }
-            
-
-
-
         }
 		
         // Fazer um algoritmo para ler 03 números reais do teclado e verificar se o primeiro é 
@@ -262,8 +258,6 @@ namespace primeiraLista
             {
                 System.Console.WriteLine("O primeiro número não é maior que a soma dos dois últimos números.");
             }
-
-
 		}
         
         // Ler 02 números reais do teclado (A e B), verificar e imprimir qual deles é maior, 
@@ -509,10 +503,10 @@ namespace primeiraLista
                 System.Console.WriteLine($"Custo total foi de: R$ {totalCost.ToString("0.00")}");
             }
         }  
-        // static void Main(string[] args)
-        // {
-        //    Exercise18();
-        // }
+        static void Main(string[] args)
+        {
+           Exercise7();
+        }
     }
 }
     

@@ -127,16 +127,6 @@ namespace primeiraLista
             Assert.Equal(7, result);
         }
 
-        [Theory]
-        [InlineData(new double[5]{22, 35, 32, 11, 55}, 60)]
-        public void should_return_percentage_of_ages_between_18_and_35(double[] ages, double expected)
-        {
-            var exercises = new Exercises();
-
-            double result = exercises.Exercise5(ages.ToList());
-
-            Assert.Equal(expected, result);
-        }
 
         [Theory]
         [InlineData(new int[3]{4, 6, 8}, 6)]
@@ -152,6 +142,48 @@ namespace primeiraLista
 
             // Deve / Asserções
             Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(new double[5]{22, 35, 32, 11, 55}, 60)]
+        public void should_return_percentage_of_ages_between_18_and_35(double[] ages, double expected)
+        {
+            var exercises = new Exercises();
+
+            double result = exercises.Exercise5(ages.ToList());
+
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(2, 2, 5, 365)]
+        [InlineData(25, 20, 7, 63874.99999999999)]
+        public void should_return_365_when_smoked_(int yearSmoked, int cigarretsPerDay, double price, double expected)
+        // Calcular a quantidade de dinheiro gasto por um fumante. Dados: o numero de anos que ele fuma,
+        //  o nº de cigarros fumados por dia e o preço de uma carteira.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var expectedValue = exercises.Exercise7(yearSmoked, cigarretsPerDay, price);
+
+            //Deve / Asserção
+            Assert.Equal(expected, expectedValue);
+        }
+        [Theory]
+        [InlineData(6, 2, "É multiplo")]
+        public void should_return_(int firstNumber, int secondNumber, string expected)
+        //Ler dois números inteiros, X e Y, e apresentar mensagem informando se o X é múltiplo de Y
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var returnderValue = exercises.Exercise8(firstNumber, secondNumber);
+
+            //Deve / Asserção
+            Assert.Equal(expected, returnderValue);
         }
     }
 }
