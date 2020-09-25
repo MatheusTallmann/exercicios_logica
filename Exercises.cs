@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
+using System.Linq;
 
 namespace primeiraLista
 {
@@ -109,8 +110,66 @@ namespace primeiraLista
 
         public string Exercise8(int firstNumber, int secondNumber)
         {
-            return firstNumber % secondNumber == 0 ? "É multiplo" : "Não é multiplo";
+            return firstNumber % secondNumber == 0 ? "É multiplo" : "Não é multiplo";     
+        }
+
+        public string Exercise9(int firstNumber, int secondNumber, int thirdNumber)
+        {
             
+            return firstNumber > (secondNumber + thirdNumber) == true ? "O primeiro é maior!" : "O primeiro não é maior!";
+            
+            // if (firstNumber > (secondNumber + thirdNumber))
+            // {
+            //     return "O primeiro é maior!";
+            // }
+            // else
+            // {
+            //     return "O primeiro não é maior!";
+            // }
+        }
+        public string Exercise10(int firstNumber, int secondNumber)
+        // Ler 02 números reais do teclado (A e B), verificar e imprimir qual deles é maior, 
+        // ou a mensagem "A = B" caso sejam iguais.
+        {
+            if (firstNumber == secondNumber)
+            {
+                return "Eles são iguais!";
+            }
+            else
+            {
+                return firstNumber > secondNumber == true ? "O primeiro é maior!" : "O segundo é maior!";              
+            }
+        }
+        public int Exercise11(int firstNumber, int secondNumber)
+        // Ler 02 números inteiros do teclado. Se o segundo for diferente de zero, calcular e 
+        // imprimir o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: "DIVISÃO POR ZERO"
+        {
+            return firstNumber / secondNumber;
+        }
+        // public List<int> Exercise12(List<int> numbers)
+        // {   
+        //     return numbers;
+        // }
+
+
+
+
+
+
+
+
+        public int Exercise13(List<int> numbers)
+        {
+            var biggestNumber = int.MinValue;
+
+            foreach (var item in numbers)
+            {
+                if (item > biggestNumber)
+                {
+                    biggestNumber = item;
+                }
+            }
+            return biggestNumber;
         }
     }
 }

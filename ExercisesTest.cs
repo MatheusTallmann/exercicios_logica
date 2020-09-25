@@ -173,17 +173,111 @@ namespace primeiraLista
         }
         [Theory]
         [InlineData(6, 2, "É multiplo")]
-        public void should_return_(int firstNumber, int secondNumber, string expected)
+        [InlineData(12, 6, "É multiplo")]
+        [InlineData(49, 7, "É multiplo")]
+        [InlineData(81, 9, "É multiplo")]
+        public void should_return_is_multiple_when_6_and_2_is_passed(int firstNumber, int secondNumber, string expected)
         //Ler dois números inteiros, X e Y, e apresentar mensagem informando se o X é múltiplo de Y
         {
             // Dado / Setup
             var exercises = new Exercises();
             
             // Quando / Ação
-            var returnderValue = exercises.Exercise8(firstNumber, secondNumber);
+            var returnedValue = exercises.Exercise8(firstNumber, secondNumber);
 
             //Deve / Asserção
-            Assert.Equal(expected, returnderValue);
+            Assert.Equal(expected, returnedValue);
+        }
+        [Theory]
+        [InlineData(6, 2, 3, "O primeiro é maior!")]
+        [InlineData(34, 32, 1, "O primeiro é maior!")]
+        [InlineData(86, 54, 21, "O primeiro é maior!")]
+        [InlineData(524, 134, 343, "O primeiro é maior!")]
+        public void should_return_is_bigger_when_firtNumber_is_bigger(int firstNumber, int secondNumber, int thirdNumber, string expected)
+        // Fazer um algoritmo para ler 03 números reais do teclado e verificar se o primeiro é 
+        // maior que a soma dos outros dois
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var result = exercises.Exercise9(firstNumber, secondNumber, thirdNumber);
+
+            //Deve / Asserção
+            Assert.Equal(expected, result);
+        }
+        
+        [Theory]
+        [InlineData(6, 2, "O primeiro é maior!")]
+        [InlineData(11, 22, "O segundo é maior!")]
+        [InlineData(7, 12, "O segundo é maior!")]
+        [InlineData(7, 7, "Eles são iguais!")]
+        public void should_return_the_biggest_number(int firstNumber, int secondNumber, string expected)
+        // Ler 02 números reais do teclado (A e B), verificar e imprimir qual deles é maior, 
+        // ou a mensagem "A = B" caso sejam iguais.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var result = exercises.Exercise10(firstNumber, secondNumber);
+            
+            //Deve / Asserção
+            Assert.Equal(expected, result);
+        }
+        
+        [Theory]
+        [InlineData(6, 2, 3)]
+        [InlineData(12, 3, 4)]
+        [InlineData(56, 8, 7)]
+
+        // [InlineData(7, 0, "DIVISÃO POR ZERO")]
+        public void should_return_the_division(int firstNumber, int secondNumber, int expected)
+        // Ler 02 números inteiros do teclado. Se o segundo for diferente de zero, calcular e 
+        // imprimir o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: "DIVISÃO POR ZERO".
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var result = exercises.Exercise11(firstNumber, secondNumber);
+            
+            // Deve / Asserção
+            Assert.Equal(expected, result);
+        }
+
+        // [Theory]
+        // [InlineData(new int[4]{6, 2, 3, 3}, 8)]
+        // [InlineData(new int[4]{6, 2, 2, 3}, 10)]
+        // [InlineData(new int[4]{10, 4, 6, 2}, 22)]
+        // public void should_return_(int[] numbers, double expected)
+        // //Ler 4 números inteiros e calcular a soma dos que forem pares.
+        // {
+        //     // Dado / Setup
+        //     var exercises = new Exercises();
+            
+        //     // Quando / Ação
+        //     var result = exercises.Exercise12(numbers.ToList());
+            
+        //     //Deve / Asserção
+        //     Assert.Equal(expected, result);
+        // }
+
+        [Theory]
+        [InlineData(new int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 10)]
+        [InlineData(new int[10]{23, 42, 12, 34, 76, 43, 867, 645, 44, 10}, 867)]
+
+        public void should_return_(int[] numbers, int expected)
+        // Ler 10 valores e determinar o maior dentre eles.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var result = exercises.Exercise13(numbers.ToList());
+            
+            //Deve / Asserção
+            Assert.Equal(expected, result);
         }
     }
 }

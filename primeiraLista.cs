@@ -503,10 +503,10 @@ namespace primeiraLista
                 System.Console.WriteLine($"Custo total foi de: R$ {totalCost.ToString("0.00")}");
             }
         }  
-        static void Main(string[] args)
-        {
-           Exercise7();
-        }
+        // static void Main(string[] args)
+        // {
+        //    Exercise11();
+        // }
     }
 }
     
