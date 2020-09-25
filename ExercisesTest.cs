@@ -246,28 +246,28 @@ namespace primeiraLista
             Assert.Equal(expected, result);
         }
 
-        // [Theory]
-        // [InlineData(new int[4]{6, 2, 3, 3}, 8)]
-        // [InlineData(new int[4]{6, 2, 2, 3}, 10)]
-        // [InlineData(new int[4]{10, 4, 6, 2}, 22)]
-        // public void should_return_(int[] numbers, double expected)
-        // //Ler 4 números inteiros e calcular a soma dos que forem pares.
-        // {
-        //     // Dado / Setup
-        //     var exercises = new Exercises();
+        [Theory]
+        [InlineData(new int[4]{6, 2, 3, 3}, 8)]
+        [InlineData(new int[4]{6, 2, 2, 3}, 10)]
+        [InlineData(new int[4]{10, 4, 6, 2}, 22)]
+        public void should_return_the_sum_of_pairs(int[] numbers, double expected)
+        //Ler 4 números inteiros e calcular a soma dos que forem pares.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
             
-        //     // Quando / Ação
-        //     var result = exercises.Exercise12(numbers.ToList());
+            // Quando / Ação
+            var result = exercises.Exercise12(numbers.ToList());
             
-        //     //Deve / Asserção
-        //     Assert.Equal(expected, result);
-        // }
+            //Deve / Asserção
+            Assert.Equal(expected, result);
+        }
 
         [Theory]
         [InlineData(new int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 10)]
         [InlineData(new int[10]{23, 42, 12, 34, 76, 43, 867, 645, 44, 10}, 867)]
 
-        public void should_return_(int[] numbers, int expected)
+        public void should_return_the_biggest_value(int[] numbers, int expected)
         // Ler 10 valores e determinar o maior dentre eles.
         {
             // Dado / Setup

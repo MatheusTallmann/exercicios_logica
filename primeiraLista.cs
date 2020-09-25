@@ -318,7 +318,7 @@ namespace primeiraLista
             }
         }
         
-        //Ler 4 números inteiros e calcular a soma dos que forem
+        //Ler 4 números inteiros e calcular a soma dos que forem pares
         static void Exercise12()
         {
             System.Console.WriteLine("Forneça um número inteiro:");
@@ -503,10 +503,10 @@ namespace primeiraLista
                 System.Console.WriteLine($"Custo total foi de: R$ {totalCost.ToString("0.00")}");
             }
         }  
-        // static void Main(string[] args)
-        // {
-        //    Exercise11();
-        // }
+        static void Main(string[] args)
+        {
+           Exercise11();
+        }
     }
 }
     

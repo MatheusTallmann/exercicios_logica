@@ -146,17 +146,22 @@ namespace primeiraLista
         {
             return firstNumber / secondNumber;
         }
-        // public List<int> Exercise12(List<int> numbers)
-        // {   
-        //     return numbers;
-        // }
+        
+        //Ler 4 números inteiros e calcular a soma dos que forem pares.       
+        public int Exercise12(List<int> numbers)
+        {   
+            // var total = 0;
 
-
-
-
-
-
-
+            // for (int i = 0; i < numbers.Count; i++)
+            // {
+            //     if (numbers[i] % 2 == 0)
+            //     {
+            //         total += numbers[i];
+            //     }
+            // }
+            // return total;
+            return numbers.Where(item => item % 2 == 0).Sum();
+        }
 
         public int Exercise13(List<int> numbers)
         {
