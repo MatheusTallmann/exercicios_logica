@@ -279,5 +279,59 @@ namespace primeiraLista
             //Deve / Asserção
             Assert.Equal(expected, result);
         }
+        [Theory]
+        [InlineData(3, 2, 1, "1, 2, 3")]
+        [InlineData(234, 22, 551, "22, 234, 551")]
+        [InlineData(32, 22, 13, "13, 22, 32")]
+        public void should_return_three_values_in_order(int firstNumber, int secondNumber, int thirdNumber, string expected)
+		// Ler três valores e colocá-los em ordem.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var retornedValue = exercises.Exercise14(firstNumber, secondNumber, thirdNumber);
+            
+            //Deve / Asserção
+            Assert.Equal(expected, retornedValue);
+        }
+        [Theory]
+        [InlineData(new int[10]{4, 2, 3, 4, 5, 6, 7, 8, 9, 10},"3, 2")]
+        [InlineData(new int[10]{4, 4, 3, 6, 12, 15, 20, 8, 9, 10},"5, 3" )]
+        [InlineData(new int[10]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},"0, 0" )]
+        [InlineData(new int[10]{3, 1, 5, 1, 2, 3, 5, 1, 1, 1},"2, 2" )]
+        public void should_return_how_many_are_multiples_of_3_and_5 (int[] numbers, string expected)
+        // Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var retornedValue = exercises.Exercise15(numbers.ToList());
+            
+            //Deve / Asserção
+            Assert.Equal(expected, retornedValue);
+        }
+        [Theory]
+        [InlineData(1000, 800)]
+        [InlineData(1400, 1050)]
+        [InlineData(2100, 1470)]
+        public void should_return_how_many_are_miples_of_3_and_5 (double salary, double expected)
+        // Ler o salário de uma pessoa e imprimir o Salário Líquido de 
+        // acordo com a redução do imposto descrito ao lado:
+        // Menor ou igual a R$ 600,00 - ISENTO
+        // Maior que R$ 600,00 e menor ou igual a 1200 - 20% desconto
+        // Maior que R$ 1.200,00 e menor ou igual a R$2000 - 25% desconto
+        // Maior que R$ 2.000,00 - 30% desconto
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var retornedValue = exercises.Exercise16(salary);
+            
+            //Deve / Asserção
+            Assert.Equal(expected, retornedValue);
+        }
     }
 }

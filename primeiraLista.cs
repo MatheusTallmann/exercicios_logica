@@ -390,9 +390,10 @@ namespace primeiraLista
                 }
             }
 
-            System.Console.WriteLine(biggestValue);
-            System.Console.WriteLine(mediumValue);
+            System.Console.WriteLine("");
             System.Console.WriteLine(smallerValue);
+            System.Console.WriteLine(mediumValue);
+            System.Console.WriteLine(biggestValue);
 		}
 
         // Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
@@ -505,7 +506,7 @@ namespace primeiraLista
         }  
         static void Main(string[] args)
         {
-           Exercise11();
+           Exercise14();
         }
     }
 }

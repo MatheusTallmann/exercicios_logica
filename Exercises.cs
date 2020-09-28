@@ -176,5 +176,86 @@ namespace primeiraLista
             }
             return biggestNumber;
         }
+        public string Exercise14(int firstNumber, int secondNumber, int thirdNumber)
+		// Ler três valores e colocá-los em ordem.
+        {
+            var MinValue = 0;
+            
+            if (firstNumber > secondNumber && firstNumber > thirdNumber)
+            {
+                MinValue = thirdNumber;
+                thirdNumber = firstNumber;
+                firstNumber = MinValue;
+            }
+            
+            if (secondNumber > thirdNumber && secondNumber > firstNumber)
+            {
+                MinValue = thirdNumber;
+                thirdNumber = secondNumber;
+                secondNumber = MinValue;
+            }
+            
+            if (firstNumber > secondNumber)
+            {
+                MinValue = secondNumber;
+                secondNumber = firstNumber;
+                firstNumber = MinValue;
+            }
+
+            return $"{firstNumber}, {secondNumber}, {thirdNumber}";
+        }
+        public string Exercise15(List<int> numbers)
+        // Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
+        {
+            var multiple3 = 0;
+            var multiple5 = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+            
+                if (numbers[i] % 3 == 0)
+                {
+                    multiple3++; 
+
+                    if (numbers[i] % 5 == 0)
+                    {
+                        multiple5++;
+                    }
+                }
+                else if(numbers[i] % 5 == 0)
+                {
+                    multiple5++;
+                }         
+            }
+            return $"{multiple3}, {multiple5}";
+        }
+        public double Exercise16(double salary)
+        // Ler o salário de uma pessoa e imprimir o Salário Líquido de 
+        // acordo com a redução do imposto descrito ao lado:
+        // Menor ou igual a R$ 600,00 - ISENTO
+        // Maior que R$ 600,00 e menor ou igual a 1200 - 20% desconto
+        // Maior que R$ 1.200,00 e menor ou igual a R$2000 - 25% desconto
+        // Maior que R$ 2.000,00 - 30% desconto
+        {
+            var totalSalary = 0.0;
+
+            if (salary <= 600)
+            {
+                totalSalary = salary;
+            }
+            else if (salary > 600 && salary <= 1200)
+            {
+                totalSalary = salary * 0.8;
+            }
+            else if (salary > 1200 && salary <= 2000)
+            {
+                totalSalary = salary * 0.75;
+            }
+            else 
+            {
+                totalSalary = salary * 0.7;
+            }
+            return totalSalary;
+        }
     }
 }
