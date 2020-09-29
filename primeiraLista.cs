@@ -2,7 +2,7 @@ using System;
 
 namespace primeiraLista
 {
-    class primeiraLista
+    class PrimeiraLista
     {
         // Os números de 1 a 10 de forma crescente.
         // Os números de 1 a 10 de forma decrescente.
@@ -506,7 +506,7 @@ namespace primeiraLista
         }  
         static void Main(string[] args)
         {
-           Exercise17();
+           Exercise6();
         }
     }
 }

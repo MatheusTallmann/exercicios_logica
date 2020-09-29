@@ -259,9 +259,9 @@ namespace primeiraLista
         }
         public int[] Exercise17(int number)
         {
-            var result = new int[10];
+            var result = new int[11];
             
-            for (int multiplier = 1; multiplier < 11; multiplier++)
+            for (int multiplier = 0; multiplier < 11; multiplier++)
             {
                 result[multiplier] = number * multiplier;          
             }

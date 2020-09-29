@@ -334,21 +334,20 @@ namespace primeiraLista
             //Deve / Asserção
             Assert.Equal(expected, retornedValue);
         }
-        // [Theory]
-        // [InlineData(1, new int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})] 
-        // [InlineData(2, new int[10]{2,4,6,8,10,12,14,16,18,20})] 
-        // public void should_return_the_multiplication_table(int number, int[] expected)
-        // // Imprimir a tabuada de qualquer número fornecido pelo usuário até que o usuário forneça o valor –1.
-        // {
-        //     // Dado / Setup
-        //     var exercises = new Exercises();
+        [Theory]
+        [InlineData(1, new int[11]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10})] 
+        public void should_return_the_multiplication_table(int number, int[] expected)
+        // Imprimir a tabuada de qualquer número fornecido pelo usuário até que o usuário forneça o valor –1.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
             
-        //     // Quando / Ação
-        //     var retornedValue = exercises.Exercise17(number);
+            // Quando / Ação
+            var retornedValue = exercises.Exercise17(number);
             
-        //     //Deve / Asserção
-        //     Assert.Equal(expected, retornedValue);
-        // }
+            //Deve / Asserção
+            Assert.Equal(expected, retornedValue);
+        }
 
         [Theory]
         [InlineData(2, 2.6)]
