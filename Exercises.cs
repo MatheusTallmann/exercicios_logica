@@ -257,5 +257,31 @@ namespace primeiraLista
             }
             return totalSalary;
         }
+        public int[] Exercise17(int number)
+        {
+            var result = new int[10];
+            
+            for (int multiplier = 1; multiplier < 11; multiplier++)
+            {
+                result[multiplier] = number * multiplier;          
+            }
+            return result;
+        }
+        public double Exercise18(int applesNumber)
+        {
+            var apples = 1.30;
+            var apples12 = 1.00;
+            var totalCost = 0.0;
+
+            if (applesNumber < 12)
+            {
+                totalCost = applesNumber * apples;
+            }
+            else
+            {
+                totalCost = applesNumber * apples12;
+            }
+            return totalCost;
+        }
     }
 }

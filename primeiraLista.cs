@@ -488,7 +488,7 @@ namespace primeiraLista
         {
             var apples = 1.30;
             var apples12 = 1.00;
-            var totalCost = 0.00;
+            var totalCost = 0.0;
 
             System.Console.WriteLine("Quantas maçãs você comprou?");
             var input = Int32.Parse(Console.ReadLine());
@@ -506,7 +506,7 @@ namespace primeiraLista
         }  
         static void Main(string[] args)
         {
-           Exercise14();
+           Exercise17();
         }
     }
 }

@@ -314,9 +314,10 @@ namespace primeiraLista
         }
         [Theory]
         [InlineData(1000, 800)]
+        [InlineData(600, 600)]
         [InlineData(1400, 1050)]
         [InlineData(2100, 1470)]
-        public void should_return_how_many_are_miples_of_3_and_5 (double salary, double expected)
+        public void should_return_the_total_salary (double salary, double expected)
         // Ler o salário de uma pessoa e imprimir o Salário Líquido de 
         // acordo com a redução do imposto descrito ao lado:
         // Menor ou igual a R$ 600,00 - ISENTO
@@ -329,6 +330,40 @@ namespace primeiraLista
             
             // Quando / Ação
             var retornedValue = exercises.Exercise16(salary);
+            
+            //Deve / Asserção
+            Assert.Equal(expected, retornedValue);
+        }
+        // [Theory]
+        // [InlineData(1, new int[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})] 
+        // [InlineData(2, new int[10]{2,4,6,8,10,12,14,16,18,20})] 
+        // public void should_return_the_multiplication_table(int number, int[] expected)
+        // // Imprimir a tabuada de qualquer número fornecido pelo usuário até que o usuário forneça o valor –1.
+        // {
+        //     // Dado / Setup
+        //     var exercises = new Exercises();
+            
+        //     // Quando / Ação
+        //     var retornedValue = exercises.Exercise17(number);
+            
+        //     //Deve / Asserção
+        //     Assert.Equal(expected, retornedValue);
+        // }
+
+        [Theory]
+        [InlineData(2, 2.6)]
+        [InlineData(8, 10.4)]
+        [InlineData(14, 14)]
+        public void should_return_the_total_cost_of_the_apples(int apples, double expected)
+        // As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem
+        // compradas pelo menos 12. Escreva um programa que leia o número de maçãs compradas, calcule e
+        // escreva o custo total da compra.
+        {
+            // Dado / Setup
+            var exercises = new Exercises();
+            
+            // Quando / Ação
+            var retornedValue = exercises.Exercise18(apples);
             
             //Deve / Asserção
             Assert.Equal(expected, retornedValue);
