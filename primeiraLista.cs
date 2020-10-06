@@ -4,10 +4,10 @@ namespace primeiraLista
 {
     class PrimeiraLista
     {
+        static void Exercise1()
         // Os números de 1 a 10 de forma crescente.
         // Os números de 1 a 10 de forma decrescente.
         // Os números de 1 a 10 de forma crescente, mas apenas aqueles que forem par.
-        static void Exercise1()
 		{
 			var increment = 1;
 
@@ -39,8 +39,8 @@ namespace primeiraLista
 			}
 		}
         
-        // Imprimir a soma dos números inteiros de 1 a 100.
         static void Exercise2()
+        // Imprimir a soma dos números inteiros de 1 a 100.
 		{
 			var counter = 1;
 			var sum = 0;
@@ -55,8 +55,8 @@ namespace primeiraLista
 			System.Console.WriteLine(sum);
 		}
 		
-        // Imprimir todo os números ímpares menores de 200
         static void Exercise3()
+        // Imprimir todo os números ímpares menores de 200
 		{
             System.Console.WriteLine("números ímpares menores de 200");
             
@@ -67,9 +67,9 @@ namespace primeiraLista
 
 		}
         
+		static void Exercise4()  
         // Calcular a média de idade de uma turma qualquer. O algoritmo 
         // deve parar quando for digitada a idade igual a zero.
-		static void Exercise4()  
 		{
 			var sum = 0.0;
 
@@ -89,9 +89,9 @@ namespace primeiraLista
             }
 		}
        
+		static void Exercise5()
         // Criar um algoritmo que peça o nome e a idade de 5 mulheres. Após informar estes dados, o programa deve mostrar 
         // apenas porcentagem de mulheres que estão com idade entre 18 e 35. 
-		static void Exercise5()
 		{
 			var womenBetween18And35 = 0;
 
@@ -114,7 +114,15 @@ namespace primeiraLista
 		}
 
 		static void Exercise6()
-		{
+		//Criar um algoritmo que simule uma urna eletrônica. Esta urna deve possuir dois candidatos e possui três modos. 
+        //O primeiro é o modo de CADASTRO, onde o sistema pergunta o nome de cada um dos dois candidatos. 
+        //Por medidas de segurança, para poder cadastrar um candidato na urna o sistema deve solicitar ao usuário a senha 
+        //para poder ter acesso (a senha do sistema é Pa$$w0rd). O segundo modo é o modo de votos, onde o usuário informa 1 
+        //para votar no primeiro candidato e 2 para votar no segundo candidato. 
+        //O terceiro modo, é o modo de apuração de votos, onde o sistema verifica qual candidato tem mais votos. 
+        //Caso o número de votos seja igual, o sistema deve imprimir a mensagem "SEGUNDO TURNO", 
+        //caso contrário deve imprimir o nome do candidato vencedor e o número de votos que ele obteve.
+        {
 			const string registerMode = "1";
 			const string votesMode = "2";
 			const string resultMode = "3";
@@ -193,9 +201,9 @@ namespace primeiraLista
 			}
 		}
        
+        static void Exercise7()
         // Calcular a quantidade de dinheiro gasto por um fumante. Dados: o numero de anos que ele fuma,
         //  o nº de cigarros fumados por dia e o preço de uma carteira.
-        static void Exercise7()
         {
             const int numberCigarettesWallet = 20;
             const int daysInYear = 365;
@@ -216,8 +224,8 @@ namespace primeiraLista
             System.Console.WriteLine($"R${totalCost.ToString("00.00")}");
         }
        
-        // Ler dois números inteiros, X e Y, e apresentar mensagem informando se o X é múltiplo de Y    
         static void Exercise8()
+        // Ler dois números inteiros, X e Y, e apresentar mensagem informando se o X é múltiplo de Y    
         {
             System.Console.WriteLine("Forneça um número");
             var firstNumber = Int32.Parse(Console.ReadLine());
@@ -237,9 +245,9 @@ namespace primeiraLista
             }
         }
 		
+        static void Exercise9()
         // Fazer um algoritmo para ler 03 números reais do teclado e verificar se o primeiro é 
         // maior que a soma dos outros dois
-        static void Exercise9()
 		{
             System.Console.WriteLine("Forneça um número real:");
             var firstNumber = double.Parse(System.Console.ReadLine());
@@ -260,9 +268,9 @@ namespace primeiraLista
             }
 		}
         
+        static void Exercise10()
         // Ler 02 números reais do teclado (A e B), verificar e imprimir qual deles é maior, 
         // ou a mensagem "A = B" caso sejam iguais.
-        static void Exercise10()
         {
             System.Console.WriteLine("Forneça um número real:");
             var aNumber = double.Parse(System.Console.ReadLine());
@@ -285,9 +293,9 @@ namespace primeiraLista
 
         }
         
+		static void Exercise11()
         // Ler 02 números inteiros do teclado. Se o segundo for diferente de zero, calcular e 
         // imprimir o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: "DIVISÃO POR ZERO".
-		static void Exercise11()
 		{
             var firstNumber = 0;
             Console.WriteLine("Forneça um número");
@@ -318,8 +326,8 @@ namespace primeiraLista
             }
         }
         
-        //Ler 4 números inteiros e calcular a soma dos que forem pares
         static void Exercise12()
+        //Ler 4 números inteiros e calcular a soma dos que forem pares
         {
             System.Console.WriteLine("Forneça um número inteiro:");
             var firstNumber = int.Parse(System.Console.ReadLine());
@@ -340,8 +348,8 @@ namespace primeiraLista
             
         }
 		
-        // Ler 10 valores e determinar o maior dentre eles.
         static void Exercise13()
+        // Ler 10 valores e determinar o maior dentre eles.
 		{
             var biggestNumber = double.MinValue;
 
@@ -360,8 +368,8 @@ namespace primeiraLista
 
 		}
 
-		// Ler três valores e colocá-los em ordem.
         static void Exercise14()
+		// Ler três valores e colocá-los em ordem.
 		{
             var biggestValue = double.MinValue;
             var mediumValue = double.MinValue;
@@ -396,8 +404,8 @@ namespace primeiraLista
             System.Console.WriteLine(biggestValue);
 		}
 
-        // Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
 		static void Exercise15()
+        // Ler 10 números e imprimir quantos são múltiplos de 3 e quantos são múltiplos de 5.
         {
             var multiple3 = 0;
             var multiple5 = 0;
@@ -426,13 +434,13 @@ namespace primeiraLista
             System.Console.WriteLine($"Total de múltiplos de 5:{multiple5}");
         }
         
+        static void Exercise16()
         // Ler o salário de uma pessoa e imprimir o Salário Líquido de 
         // acordo com a redução do imposto descrito ao lado:
         // Menor ou igual a R$ 600,00 - ISENTO
         // Maior que R$ 600,00 e menor ou igual a 1200 - 20% desconto
         // Maior que R$ 1.200,00 e menor ou igual a R$2000 - 25% desconto
         // Maior que R$ 2.000,00 - 30% desconto
-        static void Exercise16()
         {
             var totalSalary = 0.0;
             System.Console.WriteLine("Qual é o seu salário?");
@@ -458,8 +466,8 @@ namespace primeiraLista
             System.Console.WriteLine($"Seu salário com descontos de impostos:{totalSalary}");
         }
         
-        // Imprimir a tabuada de qualquer número fornecido pelo usuário até que o usuário forneça o valor –1.
         static void Exercise17()
+        // Imprimir a tabuada de qualquer número fornecido pelo usuário até que o usuário forneça o valor –1.
 		{
             while (true)
             {
@@ -480,11 +488,10 @@ namespace primeiraLista
             }
         }
 
+        static void Exercise18()
         // As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem
         // compradas pelo menos 12. Escreva um programa que leia o número de maçãs compradas, calcule e
         // escreva o custo total da compra. 
-
-        static void Exercise18()
         {
             var apples = 1.30;
             var apples12 = 1.00;

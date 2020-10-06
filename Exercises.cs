@@ -8,6 +8,7 @@ namespace primeiraLista
     public class Exercises
     {
         public int[] Exercise1A()
+        // Os números de 1 a 10 de forma crescente.
         {
             var numbers = new int[10];
 
@@ -19,6 +20,7 @@ namespace primeiraLista
             return numbers;
         }
         public int[] Exercise1B()
+        // Os números de 1 a 10 de forma decrescente.
         {
             int[] numbers = new int[10];
             
@@ -30,6 +32,7 @@ namespace primeiraLista
             return numbers;
         }
         public int[] Exercise1C()
+        // Os números de 1 a 10 de forma crescente, mas apenas aqueles que forem par.
         {
             var numbers = new int[5];
 
@@ -42,6 +45,7 @@ namespace primeiraLista
             return numbers;
         }
         public int Exercise2()
+        // Imprimir a soma dos números inteiros de 1 a 100.
         {
             var counter = 1;
 			var sum = 0;
@@ -54,6 +58,7 @@ namespace primeiraLista
             return sum;
         }
         public int[] Exercise3()
+        // Imprimir todo os números ímpares menores de 200
         {                 
             var counter = new int[100];
 
@@ -67,7 +72,9 @@ namespace primeiraLista
             return counter;
         }    
         public double Exercise4(List<int> ages)
-		{
+		// Calcular a média de idade de uma turma qualquer. O algoritmo 
+        // deve parar quando for digitada a idade igual a zero.
+        {
             double sum = 0.0;
 
             var answers = ages.Count;
@@ -82,6 +89,8 @@ namespace primeiraLista
             return average;
 		}
         public double Exercise5(List<double> womenAge)
+        // Criar um algoritmo que peça o nome e a idade de 5 mulheres. Após informar estes dados, o programa deve mostrar 
+        // apenas porcentagem de mulheres que estão com idade entre 18 e 35.
         {
             double womanBeetween18And36 = 0;
             
@@ -109,13 +118,15 @@ namespace primeiraLista
         }
 
         public string Exercise8(int firstNumber, int secondNumber)
+        // Ler dois números inteiros, X e Y, e apresentar mensagem informando se o X é múltiplo de Y    
         {
             return firstNumber % secondNumber == 0 ? "É multiplo" : "Não é multiplo";     
         }
 
         public string Exercise9(int firstNumber, int secondNumber, int thirdNumber)
-        {
-            
+        // Fazer um algoritmo para ler 03 números reais do teclado e verificar se o primeiro é 
+        // maior que a soma dos outros dois
+        {   
             return firstNumber > (secondNumber + thirdNumber) == true ? "O primeiro é maior!" : "O primeiro não é maior!";
             
             // if (firstNumber > (secondNumber + thirdNumber))
@@ -147,8 +158,8 @@ namespace primeiraLista
             return firstNumber / secondNumber;
         }
         
-        //Ler 4 números inteiros e calcular a soma dos que forem pares.       
         public int Exercise12(List<int> numbers)
+        //Ler 4 números inteiros e calcular a soma dos que forem pares.       
         {   
             // var total = 0;
 
@@ -164,6 +175,7 @@ namespace primeiraLista
         }
 
         public int Exercise13(List<int> numbers)
+        // Ler 10 valores e determinar o maior dentre eles.
         {
             var biggestNumber = int.MinValue;
 
